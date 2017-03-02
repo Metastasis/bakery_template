@@ -1,0 +1,896 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Scriptina';
+    /* IE9 Compat Modes */
+    src: url('../fonts/SCRIPTIN.ttf');
+    /* Usual browsers */
+    src: url('../fonts/SCRIPTIN.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    /* IE9 Compat Modes */
+    src: url('../fonts/Proxima Nova Regular.otf');
+    /* Usual browsers */
+    src: url('../fonts/Proxima Nova Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    /* IE9 Compat Modes */
+    src: url('../fonts/PlayfairDisplay-Bold.otf');
+    /* Usual browsers */
+    src: url('../fonts/PlayfairDisplay-Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    /* IE9 Compat Modes */
+    src: url('../fonts/Alegreya-Regular.otf');
+    /* Usual browsers */
+    src: url('../fonts/Alegreya-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    /* IE9 Compat Modes */
+    src: url('../fonts/Alegreya-Bold.otf');
+    /* Usual browsers */
+    src: url('../fonts/Alegreya-Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/*~~~~~~~~~~~~~~~~~*
+~~~~~~~~~~~~~~~~~~~~
+Overrides
+~~~~~~~~~~~~~~~~~~~~
+*~~~~~~~~~~~~~~~~~*/
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Alegreya';
+    font-weight: bold;
+    margin: 0;
+}
+
+h5 {
+    letter-spacing: 1px;
+    color: #a47d5e;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    letter-spacing: 0.1rem;
+    line-height: 1.4;
+}
+
+body,
+html {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-size: 10px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-style: normal;
+    font-weight: 300;
+    font-family: 'ProximaNova';
+}
+
+blockquote {
+    quotes: "“" "”";
+    text-align: center;
+    font-family: 'Scriptina';
+    color: #a47d5e;
+    font-size: 2.4rem;
+    line-height: 0.7;
+    text-align: center;
+}
+
+blockquote:before,
+blockquote:after {
+    font-size: 6rem;
+    font-family: "Times New Roman";
+    color: rgba(86, 83, 76, 0.502);
+    display: inline-block;
+}
+
+blockquote:before {
+    content: open-quote;
+}
+
+blockquote:after {
+    content: close-quote;
+    top: 2rem;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    position: relative;
+}
+
+
+/*~~~~~~~~~~~~~~~~~*
+~~~~~~~~~~~~~~~~~~~~
+Containers
+~~~~~~~~~~~~~~~~~~~~
+*~~~~~~~~~~~~~~~~~*/
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 1.4rem;
+    color: #56534c;
+}
+
+.columns {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 90px;
+    padding-bottom: 64px;
+}
+
+.column {
+    width: 39.375%;
+}
+
+.column-lg {
+    /* 1260px / 1600px */
+    width: 78.75%;
+}
+
+.widget-column {
+    width: 66.875%;
+    position: relative;
+}
+
+
+/*~~~~~~~~~~~~~~~~~*
+~~~~~~~~~~~~~~~~~~~~
+Navigation
+~~~~~~~~~~~~~~~~~~~~
+*~~~~~~~~~~~~~~~~~*/
+
+header {
+    width: 100%;
+    background-color: rgba(86, 83, 76, 0.529);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    align-items: baseline;
+    /*    position: fixed;*/
+    position: absolute;
+    font-family: 'Alegreya';
+    z-index: 1200;
+}
+
+.logo {
+    color: #ffffff;
+    font-family: 'Scriptina';
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 2.5rem;
+    line-height: 1;
+}
+
+nav {
+    margin-right: 25px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+nav ul li {
+    color: #FFFFFF;
+    text-align: center;
+    margin-right: 25px;
+    letter-spacing: 2px;
+    transition: all 0.3s linear;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li a {
+    color: #FFFFFF;
+}
+
+ul li:hover a {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+/*~~~~~~~~~~~~~~~~~*
+~~~~~~~~~~~~~~~~~~~~
+Hero
+~~~~~~~~~~~~~~~~~~~~
+*~~~~~~~~~~~~~~~~~*/
+
+.hero {
+    background: rgb(158, 156, 147) url("../images/hero_img.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.hero__logo {
+    font-size: 9.2rem;
+    font-family: 'PlayFairDisplay';
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero__sep {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.hero__text {
+    font-size: 2.4rem;
+    width: 50%;
+    color: white;
+    text-align: center;
+    z-index: 1010;
+}
+
+.hero__ctrl {
+    z-index: 1010;
+    margin-top: calc(54px + 16px);
+}
+
+.shadow-blur {
+    position: absolute;
+    box-shadow: 0 0 250px 250px rgba(86, 79, 76, 0.71);
+    z-index: 1000;
+    width: 1px;
+    top: 50%;
+    left: 50%;
+}
+
+
+/*~~~~~~~~~~~~~~~~~*
+~~~~~~~~~~~~~~~~~~~~
+Common style among the page
+~~~~~~~~~~~~~~~~~~~~
+*~~~~~~~~~~~~~~~~~*/
+
+.art-header {
+    text-align: center;
+    margin-bottom: 67px;
+}
+
+.art-header h2 {
+    font-size: 4.8rem;
+}
+
+.art-header h5 {}
+
+
+/*~~~~~~~~~~~~~~~~~*
+~~~~~~~~~~~~~~~~~~~~
+Art of cakes
+~~~~~~~~~~~~~~~~~~~~
+*~~~~~~~~~~~~~~~~~*/
+
+.cakes {
+    padding-top: 5.14rem;
+    text-align: center;
+}
+
+.cakes__container {
+    /* 485px / 630px */
+    width: 76.984%;
+    margin: 0 auto;
+}
+
+.chef-quote {
+    width: 100%;
+    margin-top: 36px;
+}
+
+.chef-quote h4 {
+    font-size: 2.4rem;
+}
+
+.chef-profile {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.21rem;
+}
+
+.chef-profile__name {
+    font-family: 'Alegreya';
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 2.4rem;
+    border-top: 1px solid rgb(215, 213, 202);
+    border-bottom: 1px solid rgb(215, 213, 202);
+}
+
+.chef-profile__photo {
+    border-radius: 50%;
+    margin: 0 24px;
+}
+
+
+/*~~~~~~~~~~~~~~~~~*
+~~~~~~~~~~~~~~~~~~~~
+Gallery
+~~~~~~~~~~~~~~~~~~~~
+*~~~~~~~~~~~~~~~~~*/
+
+.gallery-cakes {
+    width: 100%;
+    display: flex;
+    margin-top: 55px;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.gallery-cakes__photo {
+    width: 48%;
+    margin: 1%;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    height: 30vh;
+}
+
+.gallery-cakes__photo img {
+    max-width: 100%;
+}
+
+.gallery-cakes__photo__border {
+    display: block;
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    border: 5px solid white;
+}
+
+.gallery-cakes__photo__border:hover {
+    border-color: #56534c;
+}
+
+
+/*~~~~~~~~~~~~~~~~~*
+~~~~~~~~~~~~~~~~~~~~
+Food widget
+~~~~~~~~~~~~~~~~~~~~
+*~~~~~~~~~~~~~~~~~*/
+
+.bg-food {
+    background: white url("../images/background_bakery.jpg") no-repeat;
+}
+
+.widget-food {
+    /* 965px / 1070px */
+    width: 90.187%;
+    display: flex;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 10px 30px 0px rgba(105, 80, 58, 0.3);
+}
+
+.widget-food__photo {
+    background: white url("../images/pancake.png") no-repeat left center;
+    background-size: cover;
+    /* 420px / 965px (left side of widget) */
+    width: 43.523%;
+    flex-shrink: 0;
+    display: flex;
+}
+
+.widget-rating {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.widget-rating img {
+    padding: 10px 0;
+}
+
+.widget-food__desc {
+    padding-top: 74px;
+    padding-bottom: 18px;
+    background: url("../images/widget_food_windmill.png") no-repeat right bottom;
+}
+
+.widget-food__desc__container {
+    width: 73.395%;
+    margin: auto;
+}
+
+.photo-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    /* 965px - 420px = 545px (right side of widget)*/
+    /* 425px/545px */
+    /*    width: 77.982%;*/
+}
+
+.photo-list__items {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    flex: 1 1 auto;
+}
+
+.photo-list__items li {
+    cursor: pointer;
+}
+
+.photo-list__items img {
+    vertical-align: bottom;
+    max-width: 80%;
+}
+
+.photo-list__scroll {
+    flex: 0 1 auto;
+    border-radius: 50%;
+    width: 32px;
+    /*     height: 32px; */
+    /* line-height instead of height, because it contains text */
+    line-height: 1.6;
+    border: 2px solid #56534c;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.photo-list__scroll.disable {
+    color: #d8bba3;
+    border-color: #d8bba3;
+}
+
+.widget-food__duration {
+    position: absolute;
+    background: white url("../images/widget_food_land.svg") no-repeat bottom center;
+    box-shadow: 0px 10px 30px 0px rgba(105, 80, 58, 0.3);
+    right: -2rem;
+    top: -50px;
+    text-align: center;
+    font-family: 'Alegreya';
+    font-weight: bold;
+    font-size: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #979285;
+}
+
+.widget-food__duration__type,
+.widget-food__duration__title {
+    font-size: 1.8rem;
+}
+
+.widget-food__duration__title {
+    color: #a47d5e;
+}
+
+.widget-food__duration__time {
+    font-size: 9.2rem;
+    line-height: 1;
+    color: #dfc691;
+}
+
+.widget-food__switcher {
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.widget-food__photo-center {
+    background: white url("../images/menu_burger.svg") no-repeat center center;
+    top: 50%;
+    left: 36.523%;
+}
+
+.widget-food__photo-center.closed {
+    transform: rotate(90deg);
+}
+
+
+/*~~~~~~~~~~~~~~~~~*
+~~~~~~~~~~~~~~~~~~~~
+Breakfast menu
+~~~~~~~~~~~~~~~~~~~~
+*~~~~~~~~~~~~~~~~~*/
+
+.bg-breakfast {
+    background: url(../images/background_breakfast.png) no-repeat;
+    background-size: cover;
+}
+
+.art-header-breakfast > h2 {
+    font-size: 6rem;
+    color: white;
+}
+
+.art-header-breakfast > h5 {
+    font-size: 1.8rem;
+    color: #c8a593;
+}
+
+.dish {
+    font-family: 'Alegreya';
+    text-align: center;
+    margin: 25px 0;
+}
+
+.dish__title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.dish__ingridients {
+    font-family: 'ProximaNova';
+    font-size: 1.6rem;
+    color: #c2beba;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.dish__price {
+    font-size: 3.6rem;
+    letter-spacing: 1px;
+    color: #dfc691;
+}
+
+.menu {
+    background: white;
+    padding: 10px;
+}
+
+.art-header-menu {
+    font-size: 4.4rem;
+    margin: 0;
+}
+
+.menu__container {
+    border: 1px dashed rgb(158, 156, 147);
+    text-align: center;
+}
+
+.menu__header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 82.955%;
+    margin: auto;
+}
+
+.menu__header__title {
+    width: 82.955%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.menu__header__title span {
+    flex: 1;
+    font-family: 'Alegreya';
+    font-weight: bold;
+    line-height: 2.143;
+}
+
+.menu__header__circle-small,
+.menu__header__circle-container {
+    border-radius: 50%;
+    border: 1px solid rgb(194, 190, 186);
+}
+
+.menu__header__circle-small {
+    width: 10px;
+    height: 10px;
+}
+
+.menu__header__circle-container {
+    width: 60px;
+    height: 60px;
+    background: url(../images/breakfast_bakery_product.svg) no-repeat center center;
+}
+
+.menu__header__border {
+    border: 1px solid rgb(194, 190, 186);
+    height: 1px;
+    flex: 1;
+}
+
+.menu__content {
+    width: 78.571%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 72px;
+    margin-bottom: 53px;
+}
+
+.menu__content p {
+    font-size: 1.4rem;
+    line-height: 2.143;
+    margin-top: 42px;
+    margin-bottom: 50px;
+}
+
+.menu__content__ctrl {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+
+/*~~~~~~~~~~~~~~~~~*
+~~~~~~~~~~~~~~~~~~~~
+Meal screen
+~~~~~~~~~~~~~~~~~~~~
+*~~~~~~~~~~~~~~~~~*/
+
+.meal {}
+
+.bg-meal {
+    background: #f3f1e9;
+}
+
+.meal__header {
+    /*    position: relative;*/
+}
+
+.meal__header .art-header {
+    position: relative;
+}
+
+.meal__header img {
+    bottom: 10rem;
+    max-width: 10%;
+}
+
+.meal__content {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meal__ingridients {
+    /* 300px / 1260px */
+    width: 23.8%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ingridient {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.ingridient__image {
+    margin: auto;
+    border-radius: 50%;
+    background: #834f4e;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px -10px rgba(105, 80, 58, 0.3);
+}
+
+.ingridient__image img {
+    max-height: 100%;
+}
+
+.ingridient__title {
+    color: #a47d5e;
+    font-size: 3rem;
+    padding: 15px 0;
+}
+
+.meal__info {
+    /* 860px / 1260px */
+    width: 68.254%;
+    border: 5px solid white;
+    box-shadow: 0px 10px 23px -10px rgba(105, 80, 58, 0.3);
+    background: url(../images/meal_background.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.meal-pic {
+    position: relative;
+    height: 550px;
+}
+
+.meal-pic__ctrls {
+    position: absolute;
+    bottom: -20px;
+    left: -25px;
+}
+
+.stickers {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    right: 0;
+    top: -27px;
+}
+
+.sticker {
+    font-family: 'Alegreya';
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background: white url("../images/widget_food_land.svg") no-repeat bottom center;
+}
+
+.sticker_small {
+    width: 180px;
+    height: 180px;
+}
+
+.sticker_medium {
+    width: 200px;
+    height: 200px;
+}
+
+.sticker_opaque {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.sticker_opaque .sticker__time {
+    color: #56534c;
+}
+
+.sticker__title {
+    font-size: 1.8rem;
+    color: #a47d5e;
+}
+
+.sticker__time {
+    font-size: 6rem;
+    /*    color: #56534c;*/
+    color: #dfc691;
+}
+
+.sticker__duration {
+    font-size: 1.8rem;
+    color: #979285;
+}
+
+
+/*~~~~~~~~~~~~~~~~~*
+~~~~~~~~~~~~~~~~~~~~
+Button
+~~~~~~~~~~~~~~~~~~~~
+*~~~~~~~~~~~~~~~~~*/
+
+.btn {
+    border-width: 1px;
+    border-color: rgb(158, 156, 147);
+    border-style: dashed;
+    font-family: 'Alegreya';
+    font-weight: bold;
+    width: 190px;
+    height: 50px;
+    letter-spacing: 4px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-default {
+    background-color: rgba(86, 83, 76, 0.529);
+    color: white;
+}
+
+.btn-menu {
+    background-color: transparent;
+    border-style: solid;
+    color: #a47d5e;
+}
+
+.btn-meal {
+    color: #dfc691;
+    background-color: white;
+    border-color: rgb(223, 198, 145);
+}
+
+.btn-meal:hover,
+.btn-meal:active {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.btn-menu:hover,
+.btn-menu:active,
+.btn-default:hover,
+.btn-default:active {
+    background-color: rgba(86, 83, 76, 0.1);
+}
+
+
+/*~~~~~~~~~~~~~~~~~*
+~~~~~~~~~~~~~~~~~~~~
+Utils
+~~~~~~~~~~~~~~~~~~~~
+*~~~~~~~~~~~~~~~~~*/
+
+.hidden {
+    display: none;
+}
+
+.abs-center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
